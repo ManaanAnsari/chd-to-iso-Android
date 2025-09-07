@@ -1,0 +1,12 @@
+# Crush directory
+.crush/
+
+# Game files
+*.chd
+*.cue
+*.bin
+*.iso
+
+# Termux storage links
+storage/
+QWEN.md
