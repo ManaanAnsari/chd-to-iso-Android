@@ -4,9 +4,11 @@
 # Game files
 *.chd
 *.cue
+temp_auto_push.bat
 *.bin
 *.iso
 
 # Termux storage links
 storage/
-.gemini
+.gemini.gitignore
+temp_interactive_push.bat
