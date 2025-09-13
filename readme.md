@@ -15,9 +15,11 @@ This project provides a streamlined workflow for converting CHD (MAME Compressed
 Follow these steps to perform the conversion:
 
 1. **Install Termux**
+
    - Download and install Termux from the official GitHub releases page.
 
 2. **Initial Setup**
+
    ```bash
    pkg update && pkg upgrade -y
    termux-setup-storage
@@ -25,25 +27,32 @@ Follow these steps to perform the conversion:
    ```
 
 3. **Clone the Repository**
+
    ```bash
-   git clone <repository_url> # Replace with your actual repository URL
-   cd <repository_directory> # Navigate to the cloned directory
+   git clone https://github.com/ManaanAnsari/chd-to-iso-Android.git # Replace with your actual repository URL
+   cd chd-to-iso-Android # Navigate to the cloned directory
    ```
 
 4. **Prepare Scripts**
+
    - Ensure all `.sh` files have execute permissions:
+
    ```bash
    chmod +x *.sh
    ```
 
 5. **Run Conversion Workflow**
+
    - **Step 1: Send CHD**
+
      ```bash
      ./send.sh
      ```
+
      The script will list all `.chd` files found in your Downloads folder and prompt you to select one. It will then copy the selected file to the Ubuntu environment as `game.chd` and also transfer the `convert.sh` script.
-   
+
    - **Step 2: Convert (in Ubuntu)**
+
      - First, install the Ubuntu distribution (if not already done):
        ```bash
        proot-distro install ubuntu
@@ -65,7 +74,7 @@ Follow these steps to perform the conversion:
        ```bash
        exit
        ```
-   
+
    - **Step 3: Fetch ISO**
      ```bash
      ./fetch.sh
